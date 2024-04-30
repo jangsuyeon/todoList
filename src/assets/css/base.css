@@ -26,11 +26,23 @@ button {
     background-color: #ccc;
 }
 
+
+/* ToDoListItem */
 /* .todoLeft {
     width: 80%;
 } */
 
+
+.itemBtn-img {
+    width: 20px;
+}
+
 .todolist {
+    display: inline-block;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-left: 10px;
 }
 
@@ -66,7 +78,14 @@ input[type='checkbox'] {
 /* checked */
 .checkbox_label input:checked+.checkbox_icon::before {
     /*   transition: all 0.15s ease; */
-    background: url(https://intranet.adef.co.kr/asset/images/ic_check.png) #03c75a no-repeat center;
+    background: url(https://intranet.adef.co.kr/asset/images/ic_check.png) #112345 no-repeat center;
     ;
     border: none;
+}
+
+/* ToDoListInsert */
+.list-title {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 0;
 }

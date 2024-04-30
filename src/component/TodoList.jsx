@@ -1,25 +1,17 @@
+import { useState } from "react";
 import TodoListItem from "./TodoListItem";
 
 function TodoList(props) {
 
-    // state = {
-  //   input: "",
-  //   todos: [
-  //     {
-  //       id: 0,
-  //       text: 'react study test',
-  //       IsChecked: false
-  //     }
-  //   ]
-  // }
+    const [todos, setTodos] = useState([]);
 
     const todoItem = props.todoItem;
 
     return (
-        <ul>
-            {todoItem.map((item, index) => (
-                <TodoListItem></TodoListItem>
-            ))}
+        <ul style={{ marginTop: "50px" }}>
+            {todos.map((item, index) => 
+                <TodoListItem key={index}>{item}</TodoListItem>
+            )}
         </ul>
     );
 }
